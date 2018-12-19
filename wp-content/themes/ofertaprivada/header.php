@@ -36,22 +36,7 @@
 <header class="masthead">
   <div class="inner container">
     <h3 class="masthead-brand float-left">
-      <?php
-	  if(get_field('url_web')) {
-			$link = get_field('url_web');
-	  } else {
-		  if(get_field('website','options')) {
-		  	$link = get_field('website','options');
-		  }
-	  }
-	  if(!$link) {
-			global $blog_id;
-			switch_to_blog(1);
-			$link = esc_url(home_url('/'));
-			restore_current_blog();
-	  }
-	  ?>
-      <a href="<?php echo $link; ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">   
+      <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">   
       	  <?php
 		  if(is_cart() || is_checkout() || is_account_page() || is_woocommerce()) {
 			  if(get_field('site_logo','options')) {
