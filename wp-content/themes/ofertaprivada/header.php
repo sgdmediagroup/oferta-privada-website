@@ -38,16 +38,9 @@
     <h3 class="masthead-brand float-left">
       <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">   
       	  <?php
-		  if(is_cart() || is_checkout() || is_account_page() || is_woocommerce()) {
-			  if(get_field('site_logo','options')) {
-				  $logo = get_field('site_logo','options');
-				  $logo = $logo['url'];
-			  }
-		  } else {
-			  if(get_field('logo','options')) {
-				  $logo = get_field('logo','options');
-				  $logo = $logo['url'];
-			  }
+		  if(get_field('logo','options')) {
+			  $logo = get_field('logo','options');
+			  $logo = $logo['url'];
 		  }
 		  if(empty($logo)) {
 			  $logo = get_template_directory_uri().'/img/logo.png';
