@@ -29,7 +29,7 @@ define('DB_USER', 'admin');
 define('DB_PASSWORD', 'mbm3w8f4');
 
 /** MySQL hostname */
-define('DB_HOST', 'sl-us-south-1-portal.46.dblayer.com:18715');
+define('DB_HOST', 'sl-us-south-1-portal.46.dblayer.com:19152');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
