@@ -108,42 +108,6 @@ add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
  * --------------------------------------------------------------
  */
  
-if( function_exists('acf_add_options_page') ) {
-	global $blog_id;
-	if($blog_id==1) {
-		acf_add_options_page(array(
-			'page_title' 	=> 'BlackBox',
-			'menu_title'	=> 'BlackBox',
-			'menu_slug' 	=> 'blackbox',
-			'capability'	=> 'edit_posts',
-			'redirect'		=> false,
-			'icon_url' => 'dashicons-filter'
-		));
-	}
-	acf_add_options_page(array(
-		'page_title' 	=> 'Configuración de envíos',
-		'menu_title'	=> 'Envíos',
-		'menu_slug' 	=> 'envios',
-		'capability'	=> 'manage_woocommerce',
-		'redirect'		=> false,
-		'icon_url' => 'dashicons-location-alt'
-	));
-	acf_add_options_page(array(
-		'page_title' 	=> 'Configuración general',
-		'menu_title'	=> 'Configuración',
-		'menu_slug' 	=> 'configuracion',
-		'capability'	=> 'manage_woocommerce',
-		'redirect'		=> false
-	));
-	acf_add_options_page(array(
-		'page_title' 	=> 'Modalidad trabajo',
-		'menu_title'	=> 'Modalidad trabajo',
-		'menu_slug' 	=> 'modos',
-		'capability'	=> 'manage_woocommerce',
-		'redirect'		=> false,
-		'icon_url' => 'dashicons-backup'
-	));
-}
 
 //require_once( __DIR__ . '/inc/custom-fields.php');
 

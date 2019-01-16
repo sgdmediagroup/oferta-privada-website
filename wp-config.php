@@ -18,24 +18,37 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'ofertaprivada');
 
-/** MySQL database username */
-define('DB_USER', 'admin');
+if ( ! defined( 'WP_ENVIRONMENT' ) ) {
+    define( 'WP_ENVIRONMENT', 'qa' );
+}
 
-/** MySQL database password */
-define('DB_PASSWORD', 'mbm3w8f4');
+//define( 'WP_ENVIRONMENT', 'qa' );
+//define( 'WP_ENVIRONMENT', 'prod' );
 
-/** MySQL hostname */
-define('DB_HOST', 'sl-us-south-1-portal.46.dblayer.com:18715');
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+if ( 'qa' === WP_ENVIRONMENT ) {
+	define('DB_NAME', 'ofertaprivada');
+	define('DB_USER', 'admin');
+	define('DB_PASSWORD', 'mbm3w8f4');
+	define('DB_HOST', 'sl-us-south-1-portal.46.dblayer.com:18715');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+} elseif ( 'prod' === WP_ENVIRONMENT ) {
+	define('DB_NAME', 'ofertaprivada');
+	define('DB_USER', 'admin');
+	define('DB_PASSWORD', 'mbm3w8f4');
+	define('DB_HOST', 'sl-us-south-1-portal.46.dblayer.com:18715');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+} else {
+	define('DB_NAME', 'web_op');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', '');
+	define('DB_HOST', 'localhost');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+}
 
 /**#@+
  * Authentication Unique Keys and Salts.
