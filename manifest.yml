@@ -1,7 +1,7 @@
 ---
 declared-services:
   myObjectStorage:
-    label: Cloud Object Storage-OP
+    label: Object-Storage
     plan: Free
   myComposeMySQL:
     label: compose-for-mysql
@@ -14,5 +14,5 @@ applications:
   buildpack: https://github.com/cloudfoundry/php-buildpack
   random-route: true
   services:
-  - Cloud Object Storage-OP
-  - Compose for MySQL-ai
+  - myObjectStorage
+  - myComposeMySQL
